@@ -59,10 +59,8 @@ public abstract class ImmediateAdapter extends VertexConsumerProvider.Immediate 
     public VertexConsumer getBuffer(final RenderLayer layer) {
         final Optional<RenderLayer> newLayer = layer.asOptional();
         if (!this.drawFallbackLayersFirst) {
-            if (!this.currentLayer.equals(newLayer)) {
                 if (this.currentLayer.isPresent() && !this.layerBuffers.containsKey(this.currentLayer.get())) {
                     this.drawFallbackLayersFirst = true;
-                }
             }
         }
         this.currentLayer = newLayer;
