@@ -25,9 +25,6 @@ import java.util.Map;
 
 public class BatchableImmediate extends ImmediateAdapter {
 
-    public BatchableImmediate() {
-    }
-
     public BatchableImmediate(final Map<RenderLayer, BufferBuilder> layerBuffers) {
         super(layerBuffers);
     }
