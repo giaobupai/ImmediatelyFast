@@ -17,7 +17,6 @@
  */
 package net.raphimc.immediatelyfast.feature.core;
 
-import com.google.common.collect.ImmutableMap;
 import it.unimi.dsi.fastutil.objects.Reference2ObjectLinkedOpenHashMap;
 import it.unimi.dsi.fastutil.objects.Reference2ObjectMap;
 import it.unimi.dsi.fastutil.objects.ReferenceLinkedOpenHashSet;
@@ -42,10 +41,6 @@ public abstract class ImmediateAdapter extends VertexConsumerProvider.Immediate 
     protected final ReferenceSet<RenderLayer> activeLayers = new ReferenceLinkedOpenHashSet<>();
 
     protected boolean drawFallbackLayersFirst = false;
-
-    public ImmediateAdapter() {
-        this(ImmutableMap.of());
-    }
 
     public ImmediateAdapter(final Map<RenderLayer, BufferBuilder> layerBuffers) {
         this(FALLBACK_BUFFER, layerBuffers);
