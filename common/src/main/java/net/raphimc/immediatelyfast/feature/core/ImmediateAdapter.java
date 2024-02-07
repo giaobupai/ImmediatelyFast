@@ -17,6 +17,7 @@
  */
 package net.raphimc.immediatelyfast.feature.core;
 
+import com.google.common.collect.ImmutableMap;
 import it.unimi.dsi.fastutil.objects.Reference2ObjectLinkedOpenHashMap;
 import it.unimi.dsi.fastutil.objects.Reference2ObjectMap;
 import it.unimi.dsi.fastutil.objects.ReferenceLinkedOpenHashSet;
