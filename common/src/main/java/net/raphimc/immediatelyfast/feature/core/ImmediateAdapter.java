@@ -169,12 +169,6 @@ public abstract class ImmediateAdapter extends VertexConsumerProvider.Immediate 
         }
     }
 
-    protected Set<BufferBuilder> getBufferBuilder(final RenderLayer layer) {
-        if (this.fallbackBuffers.containsKey(layer)) {
-            return this.fallbackBuffers.get(layer);
-        }
-    }
-
     protected BufferBuilder addNewFallbackBuffer(final RenderLayer layer) {
         final BufferBuilder bufferBuilder = BufferBuilderPool.get();
         this.fallbackBuffers.computeIfAbsent(layer, k -> new ReferenceLinkedOpenHashSet<>()).add(bufferBuilder);
